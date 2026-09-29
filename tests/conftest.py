@@ -43,6 +43,9 @@ def pytest_configure(config):
     config.addinivalue_line(
         "markers", "docker: test cần Docker đang chạy, tự bỏ qua nếu không có"
     )
+    config.addinivalue_line(
+        "filterwarnings", "ignore::DeprecationWarning"
+    )
 
 
 class StubStore:
